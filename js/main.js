@@ -238,13 +238,7 @@
   const news = document.getElementById("news");
   if (news) news.addEventListener("submit", (e) => { e.preventDefault(); news.reset(); });
 
-  /* ---------- subtle hero parallax on wordmark video ---------- */
-  if (!reduce) {
-    const hv = document.querySelector(".hero__video");
-    if (hv) {
-      window.addEventListener("scroll", () => {
-        hv.style.transform = `translateY(${window.scrollY * 0.06}px) scale(1.06)`;
-      }, { passive: true });
-    }
-  }
+  /* ---------- hero wordmark fill: seamless ken-burns loop (CSS-driven) ----------
+     The building photo behind the letters animates via the heroKen keyframes,
+     giving a continuous looping "video" feel. Disabled under reduced-motion. */
 })();
