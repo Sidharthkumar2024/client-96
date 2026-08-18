@@ -159,8 +159,9 @@
       return Math.max(0, cards.length - count);
     };
 
-    // build dots
+    // build dots (optional — only if a dots container exists)
     const buildDots = () => {
+      if (!dotsWrap) return;
       dotsWrap.innerHTML = "";
       for (let i = 0; i <= maxIndex(); i++) {
         const d = document.createElement("i");
@@ -171,7 +172,7 @@
     const update = () => {
       const { cardW, gap } = perView();
       track.style.transform = `translateX(${-index * (cardW + gap)}px)`;
-      dotsWrap.querySelectorAll("i").forEach((d, i) => d.classList.toggle("on", i === index));
+      if (dotsWrap) dotsWrap.querySelectorAll("i").forEach((d, i) => d.classList.toggle("on", i === index));
     };
     const go = (i) => {
       index = Math.max(0, Math.min(i, maxIndex()));
