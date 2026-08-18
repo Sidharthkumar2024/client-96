@@ -223,12 +223,13 @@
   const news = document.getElementById("news");
   if (news) news.addEventListener("submit", (e) => { e.preventDefault(); news.reset(); });
 
-  /* ---------- subtle hero parallax on wordmark bg ---------- */
+  /* ---------- subtle hero parallax on wordmark photo fill ---------- */
   if (!reduce) {
-    const words = document.querySelectorAll(".hero__wordmark .w");
-    window.addEventListener("scroll", () => {
-      const y = window.scrollY;
-      words.forEach((w) => (w.style.backgroundPositionY = `${40 + y * 0.02}%`));
-    }, { passive: true });
+    const wm = document.querySelector(".hero__wordmark");
+    if (wm) {
+      window.addEventListener("scroll", () => {
+        wm.style.backgroundPositionY = `${32 + window.scrollY * 0.03}%`;
+      }, { passive: true });
+    }
   }
 })();
