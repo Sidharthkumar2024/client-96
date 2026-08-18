@@ -22,7 +22,34 @@
       </a>
       <nav class="nav__links" aria-label="Primary">
         <a href="#firm">THE FIRM</a>
-        <a href="#solutions" class="has-caret">WHAT WE DO <span class="caret-ico"><svg viewBox="0 0 20 20" width="15" height="15"><circle cx="10" cy="10" r="8.2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M6.6 8.8L10 12l3.4-3.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <div class="nav__dd">
+          <a href="#solutions" class="has-caret">WHAT WE DO <span class="caret-ico"><svg viewBox="0 0 20 20" width="15" height="15"><circle cx="10" cy="10" r="8.2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M6.6 8.8L10 12l3.4-3.2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <div class="megamenu">
+            <div class="megamenu__inner">
+              <div class="mega__col">
+                <span class="mega__h">Advisory</span>
+                <a href="#solutions">Strategic Advisory</a>
+                <a href="#solutions">Development Advisory</a>
+                <a href="#solutions">Joint Ventures &amp; Partnerships</a>
+                <a href="#solutions">Leasing &amp; Asset Strategy</a>
+                <a href="#solutions">Market Intelligence &amp; Insights</a>
+              </div>
+              <div class="mega__col">
+                <span class="mega__h">Capital Markets</span>
+                <a href="#solutions">Capital Raising</a>
+                <a href="#solutions">Portfolio Sales &amp; Dispositions</a>
+                <a href="#solutions">Recapitalizations &amp; Restructurings</a>
+                <a href="#solutions">Distressed &amp; Special Situations</a>
+              </div>
+              <a class="mega__feat" href="#solutions">
+                <img src="https://framerusercontent.com/images/vtBwaaNzHxCyN6uCItPJY5BKB0.jpg?scale-down-to=1024&width=2000&height=3000" alt="Featured solution" loading="lazy" />
+                <span class="mega__feat-tag">EXPLORE</span>
+                <span class="mega__feat-title">Every deal is unique. So are our solutions.</span>
+                <span class="mega__feat-link">View all solutions &rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
         <a href="#cases">CASE STUDIES</a>
         <a href="#insights">MARKET INSIGHTS</a>
       </nav>
@@ -51,7 +78,21 @@
 
     <!-- ===================== HERO ===================== -->
     <section class="hero" id="hero">
-      <div class="hero__wordmark" aria-label="Billion Group">BILLION GROUP</div>
+      <div class="hero__wordmark" aria-label="Billion Group">
+        <video class="hero__video" autoplay muted loop playsinline preload="auto"
+               poster="https://framerusercontent.com/images/wRyw2dTMH5rgSb9UhWZMngHZn2Y.jpg?scale-down-to=2048&width=6000&height=4000">
+          <source src="assets/hero.mp4" type="video/mp4" />
+        </video>
+        <svg class="hero__mask" viewBox="0 0 1000 208" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Billion Group">
+          <defs>
+            <mask id="bgWordMask">
+              <rect x="0" y="0" width="1000" height="208" fill="#ffffff" />
+              <text x="500" y="160" text-anchor="middle" font-size="166" letter-spacing="-3" fill="#000000">BILLION GROUP</text>
+            </mask>
+          </defs>
+          <rect x="0" y="0" width="1000" height="208" fill="#F8F8F5" mask="url(#bgWordMask)" />
+        </svg>
+      </div>
       <div class="hero__bottom">
         <div class="hero__head">
           <h1>Transforming<br /><em>Real Estate</em> Globally</h1>
@@ -102,56 +143,96 @@
 
     <!-- ===================== ABOUT / THE FIRM ===================== -->
     <section class="firm" id="firm">
-      <div class="firm__head">
-        <span class="eyebrow reveal">ABOUT US</span>
-        <h2 class="reveal" data-delay="80">Unmatched Expertise.<br /><em>Unrivalled Results</em></h2>
-        <p class="reveal" data-delay="160">With partners in major markets including Toronto, New York, Los Angeles, Miami, London, India, Dubai, Singapore, Tokyo and beyond. Our reach is a testament to our reputation.</p>
+      <div class="firm__media reveal">
+        <img src="https://framerusercontent.com/images/BXZi9p5dinfEFKhdxXNZQpcFDY.jpg?scale-down-to=2048&width=2696&height=3129" alt="Modern commercial tower" loading="lazy" />
       </div>
-      <div class="firm__media reveal" data-delay="120">
-        <img src="https://framerusercontent.com/images/BXZi9p5dinfEFKhdxXNZQpcFDY.jpg?scale-down-to=2048&width=2696&height=3129" alt="Architectural detail of a concrete tower" loading="lazy" />
+      <div class="firm__body">
+        <span class="eyebrow reveal"><i class="di">&#9638;</i> ABOUT US</span>
+        <h2 class="reveal" data-delay="80">Unmatched Expertise. <em>Unrivalled Results</em></h2>
+        <div class="firm__rule reveal" data-delay="120"></div>
+        <p class="reveal" data-delay="160">With partners in major markets including Toronto, New York, Los Angeles, Miami, London, India, Dubai, Singapore, Tokyo and beyond. Our reach is a testament to our reputation.</p>
+        <div class="acc" id="firmAcc">
+          <div class="acc__item reveal">
+            <button class="acc__q"><span class="acc__ico">&#9638;</span> STRATEGIC INSIGHT <i></i></button>
+            <div class="acc__a"><p>We translate deep market intelligence into decisive, forward-looking strategy tailored to every mandate.</p></div>
+          </div>
+          <div class="acc__item reveal">
+            <button class="acc__q"><span class="acc__ico">&#9638;</span> FLAWLESS EXECUTION <i></i></button>
+            <div class="acc__a"><p>From first mandate to final close, every detail is managed with institutional precision.</p></div>
+          </div>
+          <div class="acc__item reveal">
+            <button class="acc__q"><span class="acc__ico">&#9638;</span> HIGH-STAKES NEGOTIATION <i></i></button>
+            <div class="acc__a"><p>We negotiate complex, high-value transactions with discipline, discretion, and conviction.</p></div>
+          </div>
+          <div class="acc__item reveal">
+            <button class="acc__q"><span class="acc__ico">&#9638;</span> PERSONALIZED COLLABORATIVE PROCESS <i></i></button>
+            <div class="acc__a"><p>You work directly with senior partners throughout — no hand-offs, no layers.</p></div>
+          </div>
+          <div class="acc__item reveal">
+            <button class="acc__q"><span class="acc__ico">&#9638;</span> ELITE NETWORK &amp; CLIENTELE <i></i></button>
+            <div class="acc__a"><p>Access to a global network of institutional investors, owners, and capital partners.</p></div>
+          </div>
+          <div class="acc__item reveal">
+            <button class="acc__q"><span class="acc__ico">&#9638;</span> INVESTED IN YOUR SUCCESS <i></i></button>
+            <div class="acc__a"><p>Our incentives are aligned with your outcomes — we succeed only when you do.</p></div>
+          </div>
+        </div>
       </div>
     </section>
-
-    <!-- Values marquee -->
-    <div class="marquee marquee--dark" aria-hidden="true">
-      <div class="marquee__track">
-        <span>STRATEGIC INSIGHT</span><i>&bull;</i>
-        <span>FLAWLESS EXECUTION</span><i>&bull;</i>
-        <span>HIGH-STAKES NEGOTIATION</span><i>&bull;</i>
-        <span>PERSONALIZED COLLABORATIVE PROCESS</span><i>&bull;</i>
-        <span>ELITE NETWORK &amp; CLIENTELE</span><i>&bull;</i>
-        <span>INVESTED IN YOUR SUCCESS</span><i>&bull;</i>
-        <span>STRATEGIC INSIGHT</span><i>&bull;</i>
-        <span>FLAWLESS EXECUTION</span><i>&bull;</i>
-        <span>HIGH-STAKES NEGOTIATION</span><i>&bull;</i>
-        <span>PERSONALIZED COLLABORATIVE PROCESS</span><i>&bull;</i>
-        <span>ELITE NETWORK &amp; CLIENTELE</span><i>&bull;</i>
-        <span>INVESTED IN YOUR SUCCESS</span><i>&bull;</i>
-      </div>
-    </div>
 
     <!-- ===================== SOLUTIONS ===================== -->
     <section class="solutions" id="solutions">
       <div class="solutions__head">
-        <span class="eyebrow reveal">OUR SOLUTIONS</span>
-        <h2 class="reveal" data-delay="80">Every Deal Is Unique.<br /><em>So Are Our Solutions.</em></h2>
-        <p class="reveal" data-delay="160">We provide world-class, end-to-end solutions across both advisory and capital markets.</p>
-        <a href="#contact" class="btn-pill btn-pill--dark reveal" data-delay="220">
-          <span>EXPLORE SOLUTIONS</span>
-          <span class="btn-pill__dot"><svg viewBox="0 0 24 24" width="13" height="13"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </a>
+        <div class="solutions__headL">
+          <span class="eyebrow reveal"><i class="di">&#9635;</i> OUR SOLUTIONS</span>
+          <h2 class="reveal" data-delay="80">Every Deal Is Unique. <em>So Are Our Solutions.</em></h2>
+        </div>
+        <div class="solutions__headR reveal" data-delay="140">
+          <p>We provide world-class, end to end solutions across both advisory and capital markets.</p>
+          <a href="#contact" class="btn-pill btn-pill--dark">
+            <span>EXPLORE SOLUTIONS</span>
+            <span class="btn-pill__dot"><svg viewBox="0 0 24 24" width="13" height="13"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </div>
       </div>
-      <ul class="solutions__list">
-        <li class="reveal"><span class="idx">01</span><span class="name">Strategic Advisory</span><span class="arrow">&rarr;</span></li>
-        <li class="reveal"><span class="idx">02</span><span class="name">Development Advisory</span><span class="arrow">&rarr;</span></li>
-        <li class="reveal"><span class="idx">03</span><span class="name">Joint Ventures &amp; Partnerships</span><span class="arrow">&rarr;</span></li>
-        <li class="reveal"><span class="idx">04</span><span class="name">Leasing &amp; Asset Strategy</span><span class="arrow">&rarr;</span></li>
-        <li class="reveal"><span class="idx">05</span><span class="name">Market Intelligence &amp; Insights</span><span class="arrow">&rarr;</span></li>
-        <li class="reveal"><span class="idx">06</span><span class="name">Capital Raising</span><span class="arrow">&rarr;</span></li>
-        <li class="reveal"><span class="idx">07</span><span class="name">Portfolio Sales &amp; Dispositions</span><span class="arrow">&rarr;</span></li>
-        <li class="reveal"><span class="idx">08</span><span class="name">Recapitalizations &amp; Restructurings</span><span class="arrow">&rarr;</span></li>
-        <li class="reveal"><span class="idx">09</span><span class="name">Distressed &amp; Special Situations</span><span class="arrow">&rarr;</span></li>
-      </ul>
+      <div class="solgrid">
+        <div class="solcell reveal">
+          <span class="solcell__ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.3 1 2.1V16h6v-.4c0-.8.4-1.5 1-2.1A6 6 0 0 0 12 3Z"/></svg></span>
+          <span class="solcell__name">Strategic Advisory</span>
+        </div>
+        <div class="solcell reveal" data-delay="60">
+          <span class="solcell__ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16M6 21V5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v16M14 21V9h4a1 1 0 0 1 1 1v11"/><path d="M9 8h1M9 11h1M9 14h1"/></svg></span>
+          <span class="solcell__name">Development Advisory</span>
+        </div>
+        <div class="solcell reveal" data-delay="120">
+          <span class="solcell__ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 0 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 0 0 3-3l-3.9-3.9a2 2 0 0 0-2.8 0l-1.6 1.6a1 1 0 0 1-1.4 0l-2.4-2.4a1 1 0 0 1 0-1.4l2-2"/><path d="m21 3-3 1-6 6M3 5l4-1 5 5"/></svg></span>
+          <span class="solcell__name">Joint Ventures &amp; Partnerships</span>
+        </div>
+        <div class="solcell reveal">
+          <span class="solcell__ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v12"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M18 9v3a6 6 0 0 1-6 6"/></svg></span>
+          <span class="solcell__name">Leasing &amp; Asset Strategy</span>
+        </div>
+        <div class="solcell reveal" data-delay="60">
+          <span class="solcell__ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 3-3 3 3 5-6"/></svg></span>
+          <span class="solcell__name">Market Intelligence &amp; Insights</span>
+        </div>
+        <div class="solcell reveal" data-delay="120">
+          <span class="solcell__ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></svg></span>
+          <span class="solcell__name">Capital Raising</span>
+        </div>
+        <div class="solcell reveal">
+          <span class="solcell__ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg></span>
+          <span class="solcell__name">Portfolio Sales &amp; Dispositions</span>
+        </div>
+        <div class="solcell reveal" data-delay="60">
+          <span class="solcell__ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M9 13a3 3 0 0 1 5-1M15 17a3 3 0 0 1-5 1"/><path d="M9 12v2M15 16v2"/></svg></span>
+          <span class="solcell__name">Recapitalizations &amp; Restructurings</span>
+        </div>
+        <div class="solcell reveal" data-delay="120">
+          <span class="solcell__ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.2 1.9 18a2 2 0 0 0 1.7 3h16.8a2 2 0 0 0 1.7-3L13.7 3.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+          <span class="solcell__name">Distressed &amp; Special Situations</span>
+        </div>
+      </div>
     </section>
 
     <!-- ===================== CASE STUDIES ===================== -->

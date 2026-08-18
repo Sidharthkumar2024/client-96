@@ -139,6 +139,20 @@
     });
   });
 
+  /* ---------- ABOUT ACCORDION (generic .acc) ---------- */
+  document.querySelectorAll(".acc__item").forEach((item) => {
+    const q = item.querySelector(".acc__q");
+    const a = item.querySelector(".acc__a");
+    q.addEventListener("click", () => {
+      const isOpen = item.classList.contains("open");
+      item.parentElement.querySelectorAll(".acc__item.open").forEach((o) => {
+        if (o !== item) { o.classList.remove("open"); o.querySelector(".acc__a").style.maxHeight = null; }
+      });
+      item.classList.toggle("open", !isOpen);
+      a.style.maxHeight = !isOpen ? a.scrollHeight + "px" : null;
+    });
+  });
+
   /* ---------- TESTIMONIAL CAROUSEL ---------- */
   const track = document.getElementById("ttrack");
   if (track) {
@@ -224,12 +238,12 @@
   const news = document.getElementById("news");
   if (news) news.addEventListener("submit", (e) => { e.preventDefault(); news.reset(); });
 
-  /* ---------- subtle hero parallax on wordmark photo fill ---------- */
+  /* ---------- subtle hero parallax on wordmark video ---------- */
   if (!reduce) {
-    const wm = document.querySelector(".hero__wordmark");
-    if (wm) {
+    const hv = document.querySelector(".hero__video");
+    if (hv) {
       window.addEventListener("scroll", () => {
-        wm.style.backgroundPositionY = `${32 + window.scrollY * 0.03}%`;
+        hv.style.transform = `translateY(${window.scrollY * 0.06}px) scale(1.06)`;
       }, { passive: true });
     }
   }
